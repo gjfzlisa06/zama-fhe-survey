@@ -1,92 +1,183 @@
-# FHE Lottery Platform
+# FHE Survey Platform
 
-A fully homomorphic encryption (FHE) enabled lottery system on FHEVM, providing transparent and verifiable lottery rounds on-chain.
+A fully homomorphic encryption (FHE) enabled survey system on FHEVM, providing transparent and verifiable survey responses on-chain while ensuring data privacy and integrity.
+
+---
 
 ## 🌐 Live Demo
 
-**Try the live application:** [https://zama-fhe-lottery.vercel.app/](https://zama-fhe-lottery.vercel.app/)
+Try the live application: [https://zama-fhe-survey.vercel.app/](https://zama-fhe-survey.vercel.app/)
+
+---
 
 ## 🏛️ Project Background
 
-Since ancient times, lotteries have been a popular way for people to chase their dreams and wealth.  
-However, they have always faced significant challenges:  
-- **Lack of transparency**: Participants cannot fully verify the fairness of the draw  
-- **Data tampering risks**: Results can be manipulated due to insider operations or system vulnerabilities  
-- **Privacy concerns**: Players' participation information is often exposed  
+In today's data-driven world, collecting honest feedback is crucial for improving products and services. However, traditional survey systems face significant challenges:
 
-FHE Lottery leverages **Fully Homomorphic Encryption (FHE)** technology to tackle these issues.  
-By performing computations on encrypted data directly on-chain, the system ensures:  
+- **Lack of transparency:** Participants cannot verify if their responses are accurately recorded
+- **Data tampering risks:** Survey results can be manipulated after collection
+- **Privacy concerns:** Respondents may hesitate to provide honest feedback due to privacy concerns
 
-- Transparency and verifiability of all lottery operations  
-- Immutable records that cannot be altered after creation  
-- Protection of user privacy while maintaining fairness  
+FHE Survey leverages Fully Homomorphic Encryption (FHE) technology to tackle these issues. By performing computations on encrypted data directly on-chain, the system ensures:
+
+- Complete transparency and verifiability of all survey operations
+- Immutable records that cannot be altered after submission
+- Protection of respondent privacy while maintaining data integrity
+- Trustless environment where results can be verified by anyone
+
+---
 
 ## 🚀 Features
 
 ### Core Functionality
-- **Transparent Lottery System**: Manage rounds and ensure fair draws  
-- **Ticket Participation**: Users can join lotteries securely  
-- **Administrative Controls**: Authorized actions for creating rounds and managing draws  
-- **Result Visibility**: Draw outcomes are verifiable and publicly accessible  
-- **FHEVM Integration**: On-chain data encryption ensures trust and integrity  
-- **Modern Web Interface**: User-friendly frontend with wallet connectivity  
+
+- **Transparent Survey System:** Create and manage survey questions with on-chain verification
+- **Anonymous Participation:** Users can submit ratings without exposing their identity
+- **Real-time Statistics:** Instant calculation of average scores, response counts, and distribution
+- **Administrative Controls:** Admin-only functions for creating survey questions
+- **FHEVM Integration:** On-chain data encryption ensures trust and integrity
+- **Modern Web Interface:** User-friendly frontend with seamless wallet connectivity
 
 ### Privacy & Security
-- **Secure Smart Contracts**: Built with audited Solidity libraries  
-- **Wallet Connection**: Requires wallet integration for participation  
-- **Immutable Records**: Lottery data cannot be modified after creation
+
+- **Secure Smart Contracts:** Built with audited Solidity libraries
+- **Wallet Connection:** Ethereum wallet integration for participation
+- **Immutable Records:** Survey data cannot be modified after submission
+- **Encrypted Computation:** FHE enables calculations on encrypted data
+
+---
 
 ## 🏗️ Architecture
 
 ### Smart Contracts
 
-#### 1. **Lottery.sol** - Main Contract
-- Manages lottery rounds and tickets
-- Stores round data, prize, and winner info on-chain
-- Provides admin-only functions for creating rounds and drawing numbers
+**Survey.sol - Main Contract**
+
+- Manages survey questions and responses
+- Stores question data, scores, and statistics on-chain
+- Provides admin-only functions for creating questions
+- Calculates and updates statistics for each question
 
 ### Frontend Application
-- **React + TypeScript**: User interface
-- **Ethers.js**: Blockchain interaction
-- **Vite**: Fast build and hot reload
-- **MetaMask Integration**: Connect wallet, buy tickets, draw numbers
-- **Responsive Design**: Works on desktop and mobile
+
+- **React + TypeScript:** Modern user interface
+- **Ethers.js:** Blockchain interaction
+- **Vite:** Fast build and hot reload
+- **Wallet Integration:** Connect various Ethereum wallets
+- **Responsive Design:** Works on desktop and mobile devices
+- **Real-time Updates:** Instant reflection of new responses and statistics
+
+---
 
 ## 🔧 Technology Stack
 
 ### Blockchain
-- **Solidity ^0.8.24**: Smart contract development
-- **FHEVM**: Fully Homomorphic Encryption Virtual Machine
-- **OpenZeppelin**: Secure contract libraries
-- **Hardhat**: Development and deployment framework
+
+- **Solidity ^0.8.24:** Smart contract development
+- **FHEVM:** Fully Homomorphic Encryption Virtual Machine
+- **OpenZeppelin:** Secure contract libraries
+- **Hardhat:** Development and deployment framework
 
 ### Frontend
+
 - **React 18 + TypeScript**
-- **Vite**
-- **Tailwind CSS** (optional styling)
-- **Ethers.js**
-- **MetaMask wallet integration**
+- **Vite:** Build tool and dev server
+- **Ethers.js:** Ethereum interaction
+- **Custom CSS:** Modern glassmorphism design with blue gradient theme
+- **Wallet Integration:** Support for MetaMask, OKX, Coinbase, Trust, and Binance wallets
 
 ### Infrastructure
-- **Vercel**: Frontend deployment 
-- **Sepolia Testnet**: Development and testing
+
+- **Vercel:** Frontend deployment
+- **Sepolia Testnet:** Development and testing environment
+
+---
 
 ## 📦 Installation
 
 ### Prerequisites
+
 - Node.js 20+
 - npm / yarn / pnpm
-- MetaMask wallet
+- Ethereum wallet (MetaMask recommended)
 
 ### Setup
 
 ```bash
+# Clone the repository
+git clone https://github.com/gjfzlisa06/zama-fhe-survey.git
+cd zama-fhe-survey
+
+# Install dependencies
 npm install
+
+# Install development dependencies
 npm install --save-dev @nomicfoundation/hardhat-toolbox
+
+# Install additional required packages
 npm install @zama-fhe/relayer-sdk
 npm install ethers dotenv
 npm install react react-dom
+
+# Compile contracts
 npx hardhat compile
+
+# Deploy to network (configure hardhat.config.js first)
 npx hardhat run deploy/deploy.ts --network sepolia
-cd frontend/web
-npm run dev
+
+# Start the development server
+cd frontend
+npm run dev   
+```
+
+## 🎯 Usage   
+
+Connect Wallet: Click the "Connect Wallet" button and select your preferred Ethereum wallet
+
+View Surveys: Browse existing survey questions and their statistics
+
+Submit Ratings: For each question, click "Submit Score" to provide your rating (1-5)
+
+Create Questions (Admin only): Admins can create new survey questions using the "Create Question" button
+
+Monitor Statistics: View real-time updates of response counts, average scores, and distributions
+
+## 🔒 Security Features
+
+All survey responses are stored on-chain with FHE encryption
+
+Only question owners (admins) can create new questions
+
+Response data is immutable once submitted
+
+Transparent statistics calculation visible to all participants
+
+## 🌟 Future Enhancements
+
+Multi-question survey forms
+
+Advanced data visualization and analytics
+
+Response weighting and filtering options
+
+Export functionality for survey results
+
+Cross-chain compatibility
+
+## 🤝 Contributing
+
+We welcome contributions to the FHE Survey Platform! Please feel free to submit issues, feature requests, or pull requests.
+
+📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+ZAMA for FHEVM technology
+
+Ethereum Foundation for blockchain infrastructure
+
+Vercel for deployment platform
+
+All contributors and testers
