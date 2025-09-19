@@ -7,6 +7,7 @@ A fully homomorphic encryption (FHE) enabled survey system on FHEVM, providing t
 ## 🌐 Live Demo
 
 Try the live application: [https://zama-fhe-survey.vercel.app/](https://zama-fhe-survey.vercel.app/)
+![界面截图](./image.png)
 
 ---
 
