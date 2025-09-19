@@ -132,52 +132,23 @@ npm run dev
 
 ## 🎯 Usage   
 
-Connect Wallet: Click the "Connect Wallet" button and select your preferred Ethereum wallet
-
-View Surveys: Browse existing survey questions and their statistics
-
-Submit Ratings: For each question, click "Submit Score" to provide your rating (1-5)
-
-Create Questions (Admin only): Admins can create new survey questions using the "Create Question" button
-
-Monitor Statistics: View real-time updates of response counts, average scores, and distributions
+- **Connect Wallet:** Click the "Connect Wallet" button and select your preferred Ethereum wallet
+- **View Surveys:** Browse existing survey questions and their statistics
+- **Submit Ratings:** For each question, click "Submit Score" to provide your rating (1-5)
+- **Create Questions (Admin only):** Admins can create new survey questions using the "Create Question" button
+- **Monitor Statistics:** View real-time updates of response counts, average scores, and distributions
 
 ## 🔒 Security Features
 
-All survey responses are stored on-chain with FHE encryption
-
-Only question owners (admins) can create new questions
-
-Response data is immutable once submitted
-
-Transparent statistics calculation visible to all participants
+- All survey responses are stored on-chain with FHE encryption
+- Only question owners (admins) can create new questions
+- Response data is immutable once submitted
+- Transparent statistics calculation visible to all participants
 
 ## 🌟 Future Enhancements
 
-Multi-question survey forms
-
-Advanced data visualization and analytics
-
-Response weighting and filtering options
-
-Export functionality for survey results
-
-Cross-chain compatibility
-
-## 🤝 Contributing
-
-We welcome contributions to the FHE Survey Platform! Please feel free to submit issues, feature requests, or pull requests.
-
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-ZAMA for FHEVM technology
-
-Ethereum Foundation for blockchain infrastructure
-
-Vercel for deployment platform
-
-All contributors and testers
+- Multi-question survey forms
+- Advanced data visualization and analytics
+- Response weighting and filtering options
+- Export functionality for survey results
+- Cross-chain compatibility
